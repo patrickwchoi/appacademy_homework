@@ -77,10 +77,15 @@ console.log(isPrime(3548563));
 
 function sumOfNPrimes(n) {
   let sum = 0
-  for (i=0; i<=n; i++) {
-    if (isPrime(i)===true) {
-      sum = sum + i
+  let i = 0
+  while (i<n) {
+    for (j=2; i<n; j++) {
+      if (isPrime(j)===true) {
+        sum = sum + j
+        i++
+      }
     }
+    
   }
   return sum
 }
